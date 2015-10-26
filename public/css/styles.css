@@ -1,0 +1,14 @@
+body {
+  background-color: hotpink;
+}
+
+nav {
+  background-color: #444;
+  width: 100%;
+  height: 6%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 35%;
+}
