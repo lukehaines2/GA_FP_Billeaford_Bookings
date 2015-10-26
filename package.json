@@ -8,8 +8,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.14.1",
+    "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "http-server": "^0.8.5",
+    "method-override": "^2.3.5",
     "mongo": "^0.1.0",
+    "mongoose": "^4.2.2",
     "morgan": "^1.6.1"
   },
   "devDependencies": {},
