@@ -4,13 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <link rel="stylesheet" href="public/css/styles.css">
-  <script src="app.js"></script>
-  <!-- // <script src="public/js/app.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="../js/graph.js"></script>
+  
+
   <title>Billeaford Bookings</title>
 </head>
 
 <body>
+
+  <button id='loadData'>Load data</button>
 
   <nav>
     <p>links are going to go here</p>
@@ -19,6 +23,9 @@
   <main>
     <h1>BILLEAFORD BOOKINGS</h1>
     <p>Some text and graphs will go here!</p>
+
+  <canvas id="myChart" width="400" height="400"></canvas>
+
   </main>
 
   <footer>
