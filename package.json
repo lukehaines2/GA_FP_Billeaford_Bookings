@@ -1,11 +1,25 @@
 {
   "name": "final-project",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "mongo": "^0.1.0",
+    "morgan": "^1.6.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukehaines2/GA_FINAL_PROJECT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lukehaines2/GA_FINAL_PROJECT/issues"
+  },
+  "homepage": "https://github.com/lukehaines2/GA_FINAL_PROJECT#readme",
+  "description": ""
 }
