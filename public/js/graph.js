@@ -6,12 +6,12 @@ var bigData;
 
 $(document).ready(function(){
 
-    $.get('http://localhost:3000/test')
+    $.get('http://localhost:3000/bookings')
     .success(function(response){
       console.log('resonse from test', response);
       bigData = response;
     })
-
+    
 
 var pieData = [
    {
@@ -59,4 +59,18 @@ var barData = {
 var context = document.getElementById('clients').getContext('2d');
 var clientsChart = new Chart(context).Bar(barData);
 
+
+
+// Iterating to pull data
+// function graphIterate(key) {
+//   for (var i = 0, l = arr.length; i < l; i++){
+//     if (arr[i]['No'] === key) {
+//       return arr[i]['Values'];
+//     }
+//   }
+//   return false;
+//   console.log(graphIterate);
+// }
+
 });
+

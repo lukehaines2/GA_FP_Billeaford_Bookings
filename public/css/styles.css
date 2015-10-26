@@ -11,9 +11,15 @@ nav {
   color: white;
   text-align: right;
   vertical-align: middle;
+  margin: 0 auto;
 }
 
 footer {
   text-align: center;
   margin-top: 5%;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 auto;
 }

@@ -21,16 +21,25 @@ var jsonObj = require("./convertcsv.json");
 // ROUTES //
 
 app.get("/", function (req, res) {
-  // render index.html
   res.sendFile(path.join(__dirname + '/public/views/index.html'))
 })
 
-app.get("/test", function (req, res) {
-  // render index.html
-  console.log(jsonObj[1]);
-  // res.sendFile(path.join(__dirname + '/public/views/index.html'))
+app.get("/bookings", function (req, res) {
+  // console.log(req.body);
   res.send(jsonObj)
+  // res.json(jsonObj)
 })
+
+// app.post("/bookings", function (req, res) {
+//   console.log(req.body);
+//   var newBooking = req.body
+//   // add a unique id
+//   jsonObj.length >= 1 ? newBooking.id = jsonObj[jsonObj.length - 1].id + 1  : newBooking.id = 0
+//   // add new food to DB (array, really...)
+//   jsonObj.push(newBooking)
+//   // send a response with newly created object
+//   res.json(newBooking)
+// })
 
 
 //LISTEN ON PORT 3000
