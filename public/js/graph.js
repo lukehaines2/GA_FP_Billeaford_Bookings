@@ -11,8 +11,8 @@ $(document).ready(function(){
       console.log('resonse from test', response);
       bigData = response;
     })
-    
 
+// PIE GRAPH
 var pieData = [
    {
       value: 25,
@@ -40,6 +40,7 @@ var context = document.getElementById('skills').getContext('2d');
 var skillsChart = new Chart(context).Pie(pieData);
 
 
+// BAR GRAPH
 var barData = {
     labels: ['Italy', 'UK', 'USA', 'Germany', 'France', 'Japan'],
     datasets: [
@@ -59,7 +60,7 @@ var barData = {
 var context = document.getElementById('clients').getContext('2d');
 var clientsChart = new Chart(context).Bar(barData);
 
-
+});
 
 // Iterating to pull data
 // function graphIterate(key) {
@@ -72,5 +73,5 @@ var clientsChart = new Chart(context).Bar(barData);
 //   console.log(graphIterate);
 // }
 
-});
+
 
