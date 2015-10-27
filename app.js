@@ -24,6 +24,14 @@ app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname + '/public/views/index.html'))
 })
 
+app.get("/landing", function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/views/landing.html'))
+})
+
+app.get("/about", function (req, res) {
+  res.sendFile(path.join(__dirname + '/public/views/about.html'))
+})
+
 app.get("/bookings", function (req, res) {
   res.send(jsonObj)
   // res.json(jsonObj)

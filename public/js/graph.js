@@ -12,17 +12,17 @@ $(document).ready(function(){
       percentageShow();
     })
 
-    {"value":0,"color":"#7BC225"}: 65
-    {"value":10,"color":"#7BC225"}: 12
-    {"value":15,"color":"#7BC225"}: 14
-    {"value":17,"color":"#7BC225"}: 1
-    {"value":20,"color":"#7BC225"}: 24
-    {"value":22,"color":"#7BC225"}: 1
-    {"value":30,"color":"#7BC225"}: 12
-    {"value":36,"color":"#7BC225"}: 1
-    {"value":39,"color":"#7BC225"}: 1
-    {"value":40,"color":"#7BC225"}: 1
-    {"value":43,"color":"#7BC225"}: 1
+    // {"value":0,"color":"#7BC225"}: 65
+    // {"value":10,"color":"#7BC225"}: 12
+    // {"value":15,"color":"#7BC225"}: 14
+    // {"value":17,"color":"#7BC225"}: 1
+    // {"value":20,"color":"#7BC225"}: 24
+    // {"value":22,"color":"#7BC225"}: 1
+    // {"value":30,"color":"#7BC225"}: 12
+    // {"value":36,"color":"#7BC225"}: 1
+    // {"value":39,"color":"#7BC225"}: 1
+    // {"value":40,"color":"#7BC225"}: 1
+    // {"value":43,"color":"#7BC225"}: 1
 
 
   // PIE GRAPH
@@ -83,8 +83,8 @@ $(document).ready(function(){
       
       var counter = {};
       percentageChart.forEach(function(obj) {
-        counter[key] = (counter[key] || 0) + 1
         var key = JSON.stringify(obj)
+        counter[key] = (counter[key] || 0) + 1
       })
       console.log(counter)
     });
