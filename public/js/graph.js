@@ -5,12 +5,23 @@ $(document).ready(function(){
 
     $.get('http://localhost:3000/bookings')
     .success(function(response){
-      // console.log('resonse from test', response);
       bigData = response;
 
-      var result = percentageChartLoop();
-      console.log(result)
+      var percentageResult = percentageChartLoop();
+      console.log(percentageResult)
     })
+
+        var percentageData = [
+          {
+            discount: 158.27,
+            percentage: 15,
+            color: '#811BD6'
+          }
+        ]
+  
+      var context = document.getElementById('percentages').getContext('2d');
+      var percentagesChart = new Chart(context).Pie(percentageData);
+
 
   // PIE GRAPH
   var pieData = [
@@ -65,18 +76,15 @@ $(document).ready(function(){
     var percentageChart = [];
     // Loop through JSON
     bigData.forEach(function(obj) { 
-      var percentage = (obj['%']*100);
-      percentageChart.push(percentage)
-      
-      // put another function in here and nest or extrapolate it
-      //  you can just do separate funcitons per graph
+      var percentage1 = (obj['%']*100);
+      var discount1 = obj['Discount']; 
+      percentageChart.push({discount: discount1, percentage: percentage1})
 
-      var county = obj['County']; 
 
     });
+      //percentage graph
     return percentageChart;
   }
-
 
 // DOC READY CLOSER
 });
