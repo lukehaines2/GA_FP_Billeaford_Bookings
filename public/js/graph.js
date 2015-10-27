@@ -1,5 +1,6 @@
 // NAMESPACING
 var bigData = bigData || {};
+var percentageResult = percentageResult || {};
 
 $(document).ready(function(){
 
@@ -7,20 +8,25 @@ $(document).ready(function(){
     .success(function(response){
       bigData = response;
 
-      var percentageResult = percentageChartLoop();
-      console.log(percentageResult)
+      percentageResult = percentageChartLoop();
+      percentageShow();
+      // console.log(percentageResult)
     })
 
-        var percentageData = [
-          {
-            discount: 158.27,
-            percentage: 15,
-            color: '#811BD6'
-          }
-        ]
+
+    var percentageData = [
+      {
+        value: 15,
+        price: '55',
+        color: '#811BD6'
+     },
+     {
+        value: 10,
+        price: 'Scala',
+        color: '#9CBABA'
+     }
+    ]
   
-      var context = document.getElementById('percentages').getContext('2d');
-      var percentagesChart = new Chart(context).Pie(percentageData);
 
 
   // PIE GRAPH
@@ -71,20 +77,23 @@ $(document).ready(function(){
   var context = document.getElementById('clients').getContext('2d');
   var clientsChart = new Chart(context).Bar(barData);
 
+
   function percentageChartLoop(){
-    
     var percentageChart = [];
-    // Loop through JSON
     bigData.forEach(function(obj) { 
       var percentage1 = (obj['%']*100);
       var discount1 = obj['Discount']; 
-      percentageChart.push({discount: discount1, percentage: percentage1})
-
-
+      percentageChart.push({value: discount1, percentage: percentage1, color: '#7BC225'})
     });
-      //percentage graph
     return percentageChart;
   }
+
+  function percentageShow(){
+    var context = document.getElementById('percentages').getContext('2d');
+    var percentagesChart = new Chart(context).Doughnut(percentageResult);
+    console.log(percentageResult)
+  }
+
 
 // DOC READY CLOSER
 });
