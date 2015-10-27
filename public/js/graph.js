@@ -60,18 +60,15 @@ var barData = {
 var context = document.getElementById('clients').getContext('2d');
 var clientsChart = new Chart(context).Bar(barData);
 
+
+
+// Loop through JSON and pull County
+jsonObj.forEach(function(obj) { console.log(obj[1].County); });
+// jsonObj.forEach(function(obj) { console.log(obj.County); });
+// jsonObj.forEach(function(obj) { console.log(obj.County); });
+
 });
 
-// Iterating to pull data
-// function graphIterate(key) {
-//   for (var i = 0, l = arr.length; i < l; i++){
-//     if (arr[i]['No'] === key) {
-//       return arr[i]['Values'];
-//     }
-//   }
-//   return false;
-//   console.log(graphIterate);
-// }
 
 
 
