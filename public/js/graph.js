@@ -10,24 +10,7 @@ $(document).ready(function(){
 
       percentageResult = percentageChartLoop();
       percentageShow();
-      // console.log(percentageResult)
     })
-
-
-    var percentageData = [
-      {
-        value: 15,
-        price: '55',
-        color: '#811BD6'
-     },
-     {
-        value: 10,
-        price: 'Scala',
-        color: '#9CBABA'
-     }
-    ]
-  
-
 
   // PIE GRAPH
   var pieData = [
@@ -77,22 +60,28 @@ $(document).ready(function(){
   var context = document.getElementById('clients').getContext('2d');
   var clientsChart = new Chart(context).Bar(barData);
 
-
+  //PERCENTAGE CALC
   function percentageChartLoop(){
     var percentageChart = [];
     bigData.forEach(function(obj) { 
       var percentage1 = (obj['%']*100);
       var discount1 = obj['Discount']; 
-      percentageChart.push({value: discount1, percentage: percentage1, color: '#7BC225'})
+      percentageChart.push({value: percentage1, color: '#7BC225'})
     });
     return percentageChart;
   }
 
+  // PERCENTAGE GRAPH
   function percentageShow(){
     var context = document.getElementById('percentages').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageResult);
     console.log(percentageResult)
   }
+
+
+
+
+
 
 
 // DOC READY CLOSER
