@@ -12,6 +12,19 @@ $(document).ready(function(){
       percentageShow();
     })
 
+    {"value":0,"color":"#7BC225"}: 65
+    {"value":10,"color":"#7BC225"}: 12
+    {"value":15,"color":"#7BC225"}: 14
+    {"value":17,"color":"#7BC225"}: 1
+    {"value":20,"color":"#7BC225"}: 24
+    {"value":22,"color":"#7BC225"}: 1
+    {"value":30,"color":"#7BC225"}: 12
+    {"value":36,"color":"#7BC225"}: 1
+    {"value":39,"color":"#7BC225"}: 1
+    {"value":40,"color":"#7BC225"}: 1
+    {"value":43,"color":"#7BC225"}: 1
+
+
   // PIE GRAPH
   var pieData = [
      {
@@ -67,10 +80,13 @@ $(document).ready(function(){
       var percentage1 = (obj['%']*100);
       var discount1 = obj['Discount']; 
       percentageChart.push({value: percentage1, color: '#7BC225'})
-    // var counts = {};
-    //   percentageChart.forEach(function(i) { counts[i] = (counts[i]||0)+1;  });
-      // console.log(counts)
-      // console.log(percentageChart)
+      
+      var counter = {};
+      percentageChart.forEach(function(obj) {
+        counter[key] = (counter[key] || 0) + 1
+        var key = JSON.stringify(obj)
+      })
+      console.log(counter)
     });
     return percentageChart;
   }
@@ -79,13 +95,8 @@ $(document).ready(function(){
   function percentageShow(){
     var context = document.getElementById('percentages').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageResult);
-    console.log(percentageResult)
+    // console.log(percentageResult)
   }
-
-
-
-
-
 
 
 // DOC READY CLOSER
