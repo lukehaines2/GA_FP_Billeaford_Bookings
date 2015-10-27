@@ -67,6 +67,10 @@ $(document).ready(function(){
       var percentage1 = (obj['%']*100);
       var discount1 = obj['Discount']; 
       percentageChart.push({value: percentage1, color: '#7BC225'})
+    // var counts = {};
+    //   percentageChart.forEach(function(i) { counts[i] = (counts[i]||0)+1;  });
+      // console.log(counts)
+      // console.log(percentageChart)
     });
     return percentageChart;
   }
