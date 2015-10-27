@@ -8,7 +8,8 @@ $(document).ready(function(){
       // console.log('resonse from test', response);
       bigData = response;
 
-      startDataAnalysis();
+      var result = percentageChartLoop();
+      console.log(result)
     })
 
   // PIE GRAPH
@@ -59,20 +60,25 @@ $(document).ready(function(){
   var context = document.getElementById('clients').getContext('2d');
   var clientsChart = new Chart(context).Bar(barData);
 
-  function startDataAnalysis(){
-// debugger
-    // Loop through JSON and pull County
-    bigData.forEach(function(obj) { 
-      console.log(obj['County']); 
-      console.log((obj['%']*100)); 
-    });
-
+  function percentageChartLoop(){
     
+    var percentageChart = [];
+    // Loop through JSON
+    bigData.forEach(function(obj) { 
+      var percentage = (obj['%']*100);
+      percentageChart.push(percentage)
+      
+      // put another function in here and nest or extrapolate it
+      //  you can just do separate funcitons per graph
+
+      var county = obj['County']; 
+
+    });
+    return percentageChart;
   }
 
-  // jsonObj.forEach(function(obj) { console.log(obj.County); });
-  // jsonObj.forEach(function(obj) { console.log(obj.County); });
 
+// DOC READY CLOSER
 });
 
 
