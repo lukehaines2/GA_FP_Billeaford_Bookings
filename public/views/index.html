@@ -18,9 +18,9 @@
 
 <body>
 
-  <nav>
+  <!-- <nav>
     <p>links are going to go here</p>
-  </nav>
+  </nav> -->
 
   <header>
     <h1>BILLEAFORD BOOKINGS</h1>
@@ -30,7 +30,7 @@
   <main>
 
       <!-- <canvas id="percentages" width="400" height="400"></canvas> -->
-   
+   <div class="container clearfix">
       <div class="third widget doughnut">
         <h3>Breakdown of Hours</h3>
         <p><a href="" class="button">Filter By Employee</a></p>
@@ -47,6 +47,36 @@
             </ul>
         </div>
       </div>
+
+      <div class="third widget line">
+    <div class="chart-legend">
+        <h3>Shipments per Day</h3>
+        <p><span>This Week</span> &mdash; <strong>Last Week</strong></p>
+        <p><a href="" class="button">Change Date Range</a><a href="" class="button">Filter by Location</a></p>
+    </div>
+    <div class="canvas-container">
+        <canvas id="shipments"></canvas>
+    </div>
+</div>
+    </div>
+        <div class="third widget">
+    <div class="chart-legend">
+        <h3>Customer Service Assessment</h3>
+        <p>based on words mentioned</p>
+        <p><a href="" class="button">Track another word</a></p>
+    </div>
+    <div class="canvas-container">
+        <canvas id="departments"></canvas>
+    </div>
+</div>
+        </div>
+        </div>
+        <div class="push"></div>
+
+
+
+
+
     </main>
 
   <footer>
