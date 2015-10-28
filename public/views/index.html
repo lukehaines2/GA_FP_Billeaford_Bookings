@@ -20,21 +20,20 @@
 
   <header>
     <div class="container clearfix">
-        <h1>BILLEAFORD BOOKINGS</h1> 
-        <h2><span>A data visualisation of holiday lets</span>
-        <a class="button">Navigate to about page</a></h2>
+      <h1>Billeaford Bookings <span>A data visualisation of holiday lets</span>
+      <a class="button">Navigate to about page</a></h1>
     </div>
-</header>
+  </header>
     
   <main>
 
-      <!-- <canvas id="percentages" width="400" height="400"></canvas> -->
    <div class="container clearfix">
       <div class="third widget doughnut">
         <h3>Total Discounts</h3>
         <p>Hover to see the discount percentage, and how many people have used it.</p>
         <div class="canvas-container">
-            <canvas id="percentages" width="250" height="250"></canvas>
+            <!-- <canvas id="percentages" width="250" height="250"></canvas> -->
+            <canvas id="percentages" width="624" height="500" style="width: 312px; height: 250px;"></canvas>
             <span class="status">% : People</span>
         </div>
         <div class="chart-legend">
@@ -49,11 +48,13 @@
 
       <div class="third widget line">
         <div class="chart-legend">
-            <h3>Shipments per Day</h3>
+            <h3>Yearly Bookings</h3>
             <p><span>This Year</span> &mdash; <strong>Last Year</strong></p>
         </div>
         <div class="canvas-container">
-            <canvas id="shipments"></canvas>
+            <canvas id="shipments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
+            <br>
+            <p>going to put some text in here maybe</p>
         </div>
       </div>
     
@@ -64,7 +65,9 @@
             <p><a href="" class="button">Track another word</a></p>
           </div>
           <div class="canvas-container">
-            <canvas id="departments"></canvas>
+            <canvas id="departments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
+            <br>
+            <p>going to put some text in here maybe</p>
           </div>
         </div>
     </div>
