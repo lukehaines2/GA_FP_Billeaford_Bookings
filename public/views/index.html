@@ -18,32 +18,31 @@
 
 <body>
 
-  <!-- <nav>
-    <p>links are going to go here</p>
-  </nav> -->
-
   <header>
-    <h1>BILLEAFORD BOOKINGS</h1>
-    <p>Some text and graphs will go here!</p>
-  </header>
+    <div class="container clearfix">
+        <h1>BILLEAFORD BOOKINGS</h1> 
+        <h2><span>A data visualisation of holiday lets</span>
+        <a class="button">Navigate to about page</a></h2>
+    </div>
+</header>
     
   <main>
 
       <!-- <canvas id="percentages" width="400" height="400"></canvas> -->
    <div class="container clearfix">
       <div class="third widget doughnut">
-        <h3>Breakdown of Hours</h3>
-        <p><a href="" class="button">Take me to my data</a></p>
+        <h3>Total Discounts</h3>
+        <p>Hover to see the discount percentage, and how many people have used it.</p>
         <div class="canvas-container">
             <canvas id="percentages" width="250" height="250"></canvas>
-            <span class="status"></span>
+            <span class="status">% : People</span>
         </div>
         <div class="chart-legend">
             <ul>
-                <li class="ship">Shipping &amp; Receiving</li>
-                <li class="rework">Rework</li>
-                <li class="admin">Administrative</li>
-                <li class="prod">Production</li>
+                <li class="value1">Discount % : People</li>
+                <li class="value2">Discount % : People</li>
+                <li class="value3">Discount % : People</li>
+                <li class="value4">Discount % : People</li>
             </ul>
         </div>
       </div>
@@ -51,8 +50,7 @@
       <div class="third widget line">
         <div class="chart-legend">
             <h3>Shipments per Day</h3>
-            <p><span>This Week</span> &mdash; <strong>Last Week</strong></p>
-            <p><a href="" class="button">Change Date Range</a><a href="" class="button">Filter by Location</a></p>
+            <p><span>This Year</span> &mdash; <strong>Last Year</strong></p>
         </div>
         <div class="canvas-container">
             <canvas id="shipments"></canvas>
@@ -72,7 +70,7 @@
     </div>
 
   </main>
-  
+
   <div class="push"></div>
   <footer>
     <p>Luke Haines&copy;</p>
