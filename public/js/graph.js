@@ -73,6 +73,11 @@ $(document).ready(function(){
   // var context = document.getElementById('clients').getContext('2d');
   // var clientsChart = new Chart(context).Bar(barData);
 
+
+  var percentageData
+
+
+
   //PERCENTAGE CALC
   function percentageChartLoop(){
     var percentageChart = [];
@@ -102,7 +107,6 @@ $(document).ready(function(){
     var percentagesChart = new Chart(context).Doughnut(percentageData);
     // console.log(percentageResult)
   }
-
 
 // DOC READY CLOSER
 });
