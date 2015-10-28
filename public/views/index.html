@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,300italic,400italic,700' rel='stylesheet' type='text/css'>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
@@ -10,8 +11,8 @@
   <link rel="stylesheet" href="./css/loading.css">
   <script src="../js/graph.js"></script>
   <link href="myfavicon.ico" rel="shortcut icon" type="image/x-icon" />
-  
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js">
   <title>Billeaford Bookings</title>
 </head>
 
@@ -27,15 +28,26 @@
   </header>
     
   <main>
-    <!-- <div id="donut-container"> -->
-      <canvas id="percentages" width="400" height="400"></canvas>
-   <!-- </div> -->
-    <!-- <div class="donut-inner">
-      <h5>47 / 60 st</h5>
-      <span>(30 / 25 st)</span>
-  </div> -->
 
-  </main>
+      <!-- <canvas id="percentages" width="400" height="400"></canvas> -->
+   
+      <div class="third widget doughnut">
+        <h3>Breakdown of Hours</h3>
+        <p><a href="" class="button">Filter By Employee</a></p>
+        <div class="canvas-container">
+            <canvas id="percentages"></canvas>
+            <span class="status"></span>
+        </div>
+        <div class="chart-legend">
+            <ul>
+                <li class="ship">Shipping &amp; Receiving</li>
+                <li class="rework">Rework</li>
+                <li class="admin">Administrative</li>
+                <li class="prod">Production</li>
+            </ul>
+        </div>
+      </div>
+    </main>
 
   <footer>
     <p>Luke Haines&copy;</p>
