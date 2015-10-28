@@ -1,6 +1,6 @@
 // NAMESPACING
 var bigData = bigData || {};
-var percentageResult = percentageResult || {};
+var percentageData = percentageData || {};
 
 $(document).ready(function(){
 
@@ -8,7 +8,7 @@ $(document).ready(function(){
     .success(function(response){
       bigData = response;
 
-      percentageResult = percentageChartLoop();
+      percentageData = percentageChartLoop();
       percentageShow();
     })
 
@@ -94,7 +94,7 @@ $(document).ready(function(){
   // PERCENTAGE GRAPH
   function percentageShow(){
     var context = document.getElementById('percentages').getContext('2d');
-    var percentagesChart = new Chart(context).Doughnut(percentageResult);
+    var percentagesChart = new Chart(context).Doughnut(percentageData);
     // console.log(percentageResult)
   }
 
