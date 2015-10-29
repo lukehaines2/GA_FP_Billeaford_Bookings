@@ -10,6 +10,18 @@ footer, .push {
   height: 600px;
 }
 
+#main-header {
+  margin: 0 0;
+  /*display: inline-block;*/
+}
+
+#header-text {
+  display: inline-block;
+  /*width: 50%;*/
+  text-align: center;
+  margin-right: 0;
+}
+
 p {
   font-size: 18px;
   margin: 0 auto;
@@ -21,8 +33,10 @@ header {
     background: #637b85;
     color: #fff;
     margin-bottom: 40px;
-    height: 70px;
+    height: 55px;
+    padding-top: 15px;
 }
+
 header span {
     font-weight: 200;
 }
@@ -57,6 +71,12 @@ canvas {
 }
 .button:hover {
     background: #637b85;
+}
+
+#nav-button {
+  float: right;
+  margin-top: 15px;
+  display: inline-block;
 }
 
 .container {

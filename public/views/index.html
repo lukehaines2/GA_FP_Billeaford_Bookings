@@ -20,8 +20,11 @@
 
   <header>
     <div class="container clearfix">
-      <h1>Billeaford Bookings <span>A data visualisation of holiday lets</span>
-      <a class="button">Navigate to about page</a></h1>
+      <div id="header-text">
+        <h1 id="main-header">Billeaford Bookings</h1> 
+        <span id="tagline">A data visualisation of holiday lets</span>
+      </div>
+      <a class="button" id="nav-button">Navigate to about page</a>
     </div>
   </header>
     
@@ -60,9 +63,9 @@
     
         <div class="third widget">
           <div class="chart-legend">
-            <h3>Customer Service Assessment</h3>
-            <p>based on words mentioned</p>
-            <p><a href="" class="button">Track another word</a></p>
+            <h3>Bookings by Month</h3>
+            <p>Easily identifying peak seasons</p>
+            <p><a href="" class="button">Change Year</a></p>
           </div>
           <div class="canvas-container">
             <canvas id="departments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
