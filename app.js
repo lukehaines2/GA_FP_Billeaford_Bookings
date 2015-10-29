@@ -34,7 +34,6 @@ app.get("/about", function (req, res) {
 
 app.get("/bookings", function (req, res) {
   res.send(jsonObj)
-  // res.json(jsonObj)
 })
 
 //LISTEN ON PORT 3000

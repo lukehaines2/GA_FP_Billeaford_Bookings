@@ -31,6 +31,10 @@ header .button {
     top: -6px;
 }
 
+#intro-text {
+  height: 100%;
+}
+
 canvas {
   margin-top: 20px;
 }
