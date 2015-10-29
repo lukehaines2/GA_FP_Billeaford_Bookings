@@ -10,6 +10,7 @@ $(document).ready(function(){
 
       percentageData = percentageChartLoop();
       percentageShow();
+      percentageShow2();
     })
 
 
@@ -47,7 +48,7 @@ $(document).ready(function(){
               pointStrokeColor : "#637b85",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(151,187,205,1)",
-              data : [65,59,90,81,30,56,40,70,80,45,30,20]
+              data : [13,15,16,10,11,7,22,10,12,7,6,4]
             },
             {
               label: "West Barn",
@@ -57,7 +58,7 @@ $(document).ready(function(){
               pointStrokeColor : "#637b85",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(151,187,205,1)",
-              data: [28, 48, 40, 19, 96, 27, 100, 80, 90, 11, 20, 30]
+              data: [17,18,12,8,19,12,17,11,15,3,9,3]
             }
         ]
     }
@@ -106,18 +107,48 @@ $(document).ready(function(){
   }
 
 
+    //PERCENTAGE CALC
+  function percentageChartLoop(){
+    var percentageChart = [];
+    var uniquePercentages = [];
+    var percentageObject = {};
+
+    for (var i = 0; i < bigData.length; i++) {
+      var percentage = (bigData[i]['%']*100);
+      if(!percentageObject[percentage]) percentageObject[percentage] = 0
+
+      if(uniquePercentages.indexOf(percentage) === -1) uniquePercentages.push(percentage)
+      percentageObject[percentage] += 1
+    };
+
+    for(var prop in percentageObject) {
+      if(percentageObject.hasOwnProperty(prop)) {
+        var pieColorNumber = percentageObject[prop];
+        console.log('this is what we want', percentageObject[prop]);
+        if(pieColorNumber <= 10) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#7234E1' })
+        } else if(pieColorNumber > 10 && pieColorNumber <= 21) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#dbba34' })
+        } else if(pieColorNumber > 21 && pieColorNumber <= 32) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#c62f29' })
+        } else {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#2c9c69' })
+        }
+      }
+    }
+
+    return percentageChart;
+  }
+
+    // PERCENTAGE GRAPH
+  function percentageShow2(){
+    var context = document.getElementById('percentages2').getContext('2d');
+    var percentagesChart = new Chart(context).Doughnut(percentageData);
+  }
 
 
 
 
-
-
-
-
-
-
-
-  
 
 // DOC READY CLOSER
 });
