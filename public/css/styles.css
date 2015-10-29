@@ -5,35 +5,32 @@ body {
   color: #666;
 }
 
-footer, .push {
+footer {
+  background-color: #dbba34;
   text-align: center;
-  height: 600px;
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  vertical-align: middle;
+}
+
+#p-footer {
+  font-size: 18px;
+  vertical-align: middle;
 }
 
 #main-header {
   margin: 0 0;
-  /*display: inline-block;*/
 }
 
 #header-text {
-  display: inline-block;
-  /*width: 50%;*/
+  display: block;
   text-align: center;
   margin-right: 0;
 }
 
-p {
-  font-size: 18px;
-  margin: 0 auto;
-}
 
-#p-key {
-  text-align: left;
-}
-
-#p-blurb {
-  padding-top: 10px;
-}
 
 /* Header styles */
 header {
@@ -50,15 +47,28 @@ header span {
 }
 header .button {
     font-size: 0.2em;
-    top: -6px;
-}
-
-#intro-text {
-  height: 100%;
+    /*top: -6px;*/
 }
 
 canvas {
   margin-top: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+#p-key {
+  text-align: left;
+}
+
+#p-blurb {
+  padding-top: 10px;
+}
+
+#intro-text {
+  height: 100%;
 }
 
 /* button */
@@ -82,14 +92,16 @@ canvas {
 }
 
 #nav-button {
-  float: right;
-  margin-top: 15px;
+  position: absolute;
+  top: 10px;
+  right: 0;
   display: inline-block;
 }
 
 .container {
     width: 200px;
     margin: 0 auto;
+    position: relative;
 }
 .canvas-container {
     min-height: 300px;
@@ -138,7 +150,6 @@ canvas {
 .value3:before { background-color: #dbba34; }
 .value4:before { background-color: #c62f29; }
 
-
 .widget.doughnut .status {
     display: block;
     position: absolute;
@@ -148,7 +159,7 @@ canvas {
     height: 0;
     padding-top: 12%;
     padding-bottom: 18%;
-    color: #444;
+    color: #fff;
     margin-top: -15%;
     margin-left: -15%;
     font-size: 1.3em;
@@ -156,8 +167,6 @@ canvas {
     text-align: center;
     border-radius: 50%;
     background-color: #aaa;
-    /*background-repeat: no-repeat;*/
-    /*background-size: 30%;*/
     background-position: center;
 }
 .widget p {

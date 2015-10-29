@@ -87,11 +87,11 @@ $(document).ready(function(){
         if(pieColorNumber <= 10) {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#c62f29' })
         } else if(pieColorNumber > 10 && pieColorNumber <= 21) {
-          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#2c9c69' })
-        } else if(pieColorNumber > 21 && pieColorNumber <= 32) {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#dbba34' })
-        } else {
+        } else if(pieColorNumber > 21 && pieColorNumber <= 32) {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#637b85' })
+        } else {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#2c9c69' })
         }
       // if percent 
       }
