@@ -13,7 +13,7 @@ $(document).ready(function(){
     })
 
 
-    var data2 = {
+    var polarData = {
     labels : ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
     datasets : [
         {
@@ -34,32 +34,36 @@ $(document).ready(function(){
     }
     var canvas = document.getElementById("shipments");
     var ctx = canvas.getContext("2d");
-    new Chart(ctx).Line(data2);
+    new Chart(ctx).Line(polarData);
 
     var data3 = {
         labels : ["Jan","Feb","March","April","May","June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"],
         datasets : [
             {
-              // label: "East Barn",
+              label: "East Barn",
               fillColor : "rgba(220,220,220,0.5)",
               strokeColor : "#637b85",
               pointColor : "#dbba34",
               pointStrokeColor : "#637b85",
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(151,187,205,1)",
               data : [65,59,90,81,30,56, 40,70,80,45,30,20]
             },
             {
-              // label: "My Second dataset",
+              label: "West Barn",
               fillColor: "rgba(151,187,205,0.2)",
               strokeColor: "rgba(151,187,205,1)",
               pointColor: "rgba(151,187,205,1)",
               pointStrokeColor : "#637b85",
-              data: [28, 48, 40, 19, 96, 27, 100]
+              pointHighlightFill: "#fff",
+              pointHighlightStroke: "rgba(151,187,205,1)",
+              data: [28, 48, 40, 19, 96, 27, 100, 80, 90, 11, 20, 30]
             }
         ]
     }
     var canvas = document.getElementById("departments");
     var ctx = canvas.getContext("2d");
-    new Chart(ctx).Radar(data3, {scaleShowLabels : false, legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"});
+    new Chart(ctx).Radar(data3, {scaleShowLabels : false, pointLabelFontSize : 14});
 
 
   //PERCENTAGE CALC
