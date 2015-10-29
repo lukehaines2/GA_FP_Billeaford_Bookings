@@ -184,6 +184,7 @@ p {
 .value4:before { background-color: #7234E1; }
 .value5:before { background-color: #dbba34; }
 .value6:before { background-color: rgba(151,187,205,1); }
+.value7:before { background-color: #fff; }
 
 .widget.doughnut .status {
     display: block;

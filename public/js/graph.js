@@ -22,14 +22,14 @@ $(document).ready(function(){
             strokeColor : "rgba(220,220,220,1)",
             pointColor : "rgba(220,220,220,1)",
             pointStrokeColor : "#fff",
-            data : [65,54,30,81,56,55,40]
+            data : [65,54,30,81,56,75,40]
         },
         {
             fillColor : "rgba(219,186,52,0.4)",
             strokeColor : "rgba(220,220,220,1)",
             pointColor : "rgba(220,220,220,1)",
             pointStrokeColor : "#fff",
-            data : [20,60,42,58,31,21,50]
+            data : [20,60,42,58,51,51,70]
         },
       ]
     }
