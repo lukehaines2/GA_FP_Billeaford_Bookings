@@ -48,7 +48,7 @@ $(document).ready(function(){
               pointStrokeColor : "#637b85",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(151,187,205,1)",
-              data : [13,15,16,10,11,7,22,10,12,7,6,4]
+              data : [13,15,26,10,21,17,22,10,12,7,6,4]
             },
             {
               label: "West Barn",
@@ -58,7 +58,7 @@ $(document).ready(function(){
               pointStrokeColor : "#637b85",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(151,187,205,1)",
-              data: [17,18,12,8,19,12,17,11,15,3,9,3]
+              data: [27,28,12,8,19,12,17,11,15,13,19,13]
             }
         ]
     }
