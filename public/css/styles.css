@@ -38,16 +38,15 @@ header {
     background: #637b85;
     color: #fff;
     margin-bottom: 40px;
-    height: 55px;
+    /*height: 55px;*/
     padding-top: 15px;
 }
 
 header span {
-    font-weight: 200;
+    font-weight: 300;
 }
 header .button {
     font-size: 0.2em;
-    /*top: -6px;*/
 }
 
 canvas {
@@ -145,10 +144,10 @@ p {
     top: 3px;
     content: "";
 }
-.value1:before { background-color: #637b85; }
-.value2:before { background-color: #2c9c69; }
-.value3:before { background-color: #dbba34; }
-.value4:before { background-color: #c62f29; }
+.value1:before { background-color: #2c9c69; }
+.value2:before { background-color: #dbba34; }
+.value3:before { background-color: #c62f29; }
+.value4:before { background-color: #7234E1; }
 
 .widget.doughnut .status {
     display: block;

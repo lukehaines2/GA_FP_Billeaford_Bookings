@@ -85,15 +85,14 @@ $(document).ready(function(){
         var pieColorNumber = percentageObject[prop];
         console.log('this is what we want', percentageObject[prop]);
         if(pieColorNumber <= 10) {
-          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#c62f29' })
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#7234E1' })
         } else if(pieColorNumber > 10 && pieColorNumber <= 21) {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#dbba34' })
         } else if(pieColorNumber > 21 && pieColorNumber <= 32) {
-          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#637b85' })
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#c62f29' })
         } else {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#2c9c69' })
         }
-      // if percent 
       }
     }
 
@@ -104,7 +103,6 @@ $(document).ready(function(){
   function percentageShow(){
     var context = document.getElementById('percentages').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageData);
-    // console.log(percentageResult)
   }
 
 // DOC READY CLOSER
