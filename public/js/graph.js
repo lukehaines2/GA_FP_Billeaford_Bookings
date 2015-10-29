@@ -47,7 +47,7 @@ $(document).ready(function(){
               pointStrokeColor : "#637b85",
               pointHighlightFill: "#fff",
               pointHighlightStroke: "rgba(151,187,205,1)",
-              data : [65,59,90,81,30,56, 40,70,80,45,30,20]
+              data : [65,59,90,81,30,56,40,70,80,45,30,20]
             },
             {
               label: "West Barn",
@@ -104,6 +104,20 @@ $(document).ready(function(){
     var context = document.getElementById('percentages').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageData);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 // DOC READY CLOSER
 });
