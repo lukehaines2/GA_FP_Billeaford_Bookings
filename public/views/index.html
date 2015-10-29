@@ -24,7 +24,7 @@
         <h1 id="main-header">Billeaford Bookings</h1> 
         <span id="tagline">A data visualisation of holiday lets</span>
       </div>
-      <a class="button" id="nav-button">Navigate to about page</a>
+      <a href="http://localhost:3000/about" class="button" id="nav-button">Navigate to about page</a>
     </div>
   </header>
     
@@ -35,29 +35,29 @@
         <h3>Total Discounts</h3>
         <p>Hover to see the discount percentage, and how many people have used it.</p>
         <div class="canvas-container">
-            <!-- <canvas id="percentages" width="250" height="250"></canvas> -->
             <canvas id="percentages" width="624" height="500" style="width: 312px; height: 250px;"></canvas>
-            <span class="status">% : People</span>
+            <p id="p-blurb">Discount : People</p>
+            <span class="status">10.28%</span>
         </div>
         <div class="chart-legend">
-            <ul>
-                <li class="value1">Discount % : People</li>
-                <li class="value2">Discount % : People</li>
-                <li class="value3">Discount % : People</li>
-                <li class="value4">Discount % : People</li>
+            <ul><p id="p-key">Key:</p>
+                <li class="value1">Discount = 0 - 10%</li>
+                <li class="value2">Discount = 11 - 21%</li>
+                <li class="value3">Discount = 22 - 32%</li>
+                <li class="value4">Discount = 33 - 43%</li>
             </ul>
         </div>
       </div>
 
       <div class="third widget line">
         <div class="chart-legend">
-            <h3>Yearly Bookings</h3>
-            <p><span>This Year</span> &mdash; <strong>Last Year</strong></p>
+          <h3>Yearly Bookings</h3>
+          <p><span>This Year</span> &mdash; <strong>Last Year</strong></p>
         </div>
         <div class="canvas-container">
-            <canvas id="shipments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
-            <br>
-            <p>going to put some text in here maybe</p>
+          <canvas id="shipments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
+          <br>
+          <p id="p-blurb">going to put some text in here maybe</p>
         </div>
       </div>
     
@@ -70,7 +70,7 @@
           <div class="canvas-container">
             <canvas id="departments" width="624" height="600" style="width: 312px; height: 300px;"></canvas>
             <br>
-            <p>going to put some text in here maybe</p>
+            <p id="p-blurb">going to put some text in here maybe</p>
           </div>
         </div>
     </div>

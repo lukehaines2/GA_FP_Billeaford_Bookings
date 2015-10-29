@@ -27,6 +27,14 @@ p {
   margin: 0 auto;
 }
 
+#p-key {
+  text-align: left;
+}
+
+#p-blurb {
+  padding-top: 10px;
+}
+
 /* Header styles */
 header {
     text-align: center;
@@ -102,18 +110,19 @@ canvas {
 .chart-legend ul {
     list-style: none;
     width: 100%;
-    margin: 30px auto 0;
+    margin: 10px auto 0;
     text-align: left;
+    margin-left: -9%;
 }
 .chart-legend li {
     text-indent: 16px;
     line-height: 24px;
     position: relative;
-    font-weight: 200;
+    font-weight: 300;
     display: block;
     float: left;
     width: 50%;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 .chart-legend  li:before {
     display: block;
@@ -133,7 +142,7 @@ canvas {
 .widget.doughnut .status {
     display: block;
     position: absolute;
-    top: 50%;
+    top: 47.5%;
     left: 50%;
     width: 30%;
     height: 0;
@@ -142,8 +151,8 @@ canvas {
     color: #444;
     margin-top: -15%;
     margin-left: -15%;
-    font-size: 1em;
-    font-weight: 700;
+    font-size: 1.3em;
+    font-weight: 600;
     text-align: center;
     border-radius: 50%;
     background-color: #aaa;
@@ -189,6 +198,7 @@ canvas {
         float: left;
         width: 47.5%;
         margin-left: 5%;
+        min-height: 523px;
     }
     .third:first-child {
         margin-left: 0;

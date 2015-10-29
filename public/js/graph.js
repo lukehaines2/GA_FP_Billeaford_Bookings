@@ -82,7 +82,18 @@ $(document).ready(function(){
 
     for(var prop in percentageObject) {
       if(percentageObject.hasOwnProperty(prop)) {
-        percentageChart.push({ value: percentageObject[prop], label: prop + '%', color: 'red' })
+        var pieColorNumber = percentageObject[prop];
+        console.log('this is what we want', percentageObject[prop]);
+        if(pieColorNumber <= 10) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#c62f29' })
+        } else if(pieColorNumber > 10 && pieColorNumber <= 21) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#2c9c69' })
+        } else if(pieColorNumber > 21 && pieColorNumber <= 32) {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#dbba34' })
+        } else {
+          percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#637b85' })
+        }
+      // if percent 
       }
     }
 
