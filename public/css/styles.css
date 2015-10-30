@@ -121,10 +121,9 @@ p {
 }
 .widget {
     position: relative;
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     background: #efefef;
     padding: 12px;
-    /*margin-bottom: 30px;*/
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -230,6 +229,10 @@ p {
     font-weight: 400;
 }
 
+#occupancy-container {
+  max-width: 332px;
+  margin-left: 70px;
+}
 
 @media only screen and (min-width:300px){
     .container {
