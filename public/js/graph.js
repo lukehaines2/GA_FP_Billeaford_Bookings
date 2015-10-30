@@ -1,7 +1,7 @@
 // NAMESPACING
 var bigData = bigData || {};
 var percentageData = percentageData || {};
-var percentageData2 = percentageData2 || {};
+var occupancyData2 = occupancyData2 || {};
 
 $(document).ready(function(){
 
@@ -11,7 +11,7 @@ $(document).ready(function(){
 
       percentageData = percentageChartLoop();
       percentageShow();
-      percentageData2 = percentageChartLoop2();
+      percentageData2 = OccupancyChartLoop2();
       percentageShow2();
     })
 
@@ -110,8 +110,8 @@ $(document).ready(function(){
 
 
     //PERCENTAGE CALC
-  function percentageChartLoop2(){
-    var percentageChart2 = [];
+  function OccupancyChartLoop2(){
+    var occupancyChart2 = [];
     var uniquePercentages2 = [];
     var percentageObject2 = {};
 
@@ -128,27 +128,23 @@ $(document).ready(function(){
         var pieColorNumber2 = percentageObject2[prop];
         console.log('this is what we want', percentageObject2[prop]);
         if(pieColorNumber2 === 'West') {
-          percentageChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
+          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
         } else if(pieColorNumber2 === 'East') {
-          percentageChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#dbba34' })
+          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#dbba34' })
         } else {
-          percentageChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
+          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
         }
       }
     }
 
-    return percentageChart2;
+    return occupancyChart2;
   }
 
     // PERCENTAGE GRAPH
   function percentageShow2(){
-    var context = document.getElementById('percentages2').getContext('2d');
+    var context = document.getElementById('occupancy').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageData2);
   }
-
-
-
-
 
 // DOC READY CLOSER
 });
