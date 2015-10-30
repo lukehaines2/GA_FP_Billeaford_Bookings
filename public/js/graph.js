@@ -11,8 +11,8 @@ $(document).ready(function(){
 
       percentageData = percentageChartLoop();
       percentageShow();
-      percentageData2 = OccupancyChartLoop2();
-      percentageShow2();
+      percentageData2 = OccupancyChartLoop();
+      occupancyShow();
     })
 
 
@@ -86,7 +86,6 @@ $(document).ready(function(){
     for(var prop in percentageObject) {
       if(percentageObject.hasOwnProperty(prop)) {
         var pieColorNumber = percentageObject[prop];
-        console.log('this is what we want', percentageObject[prop]);
         if(pieColorNumber <= 10) {
           percentageChart.push({ value: pieColorNumber, label: prop + '%', color: '#7234E1' })
         } else if(pieColorNumber > 10 && pieColorNumber <= 21) {
@@ -110,29 +109,30 @@ $(document).ready(function(){
 
 
     //PERCENTAGE CALC
-  function OccupancyChartLoop2(){
+  function OccupancyChartLoop(){
     var occupancyChart2 = [];
-    var uniquePercentages2 = [];
-    var percentageObject2 = {};
+    var uniqueOccupancy = [];
+    var occupancyObject2 = {};
 
     for (var i = 0; i < bigData.length; i++) {
-      var percentage2 = (bigData[i]['cottage']);
-      if(!percentageObject2[percentage2]) percentageObject2[percentage2] = 0
+      var percentage2 = (bigData[i]['Cottage']);
+      if(!occupancyObject2[percentage2]) occupancyObject2[percentage2] = 0
 
-      if(uniquePercentages2.indexOf(percentage2) === -1) uniquePercentages2.push(percentage2)
-      percentageObject2[percentage2] += 1
+      if(uniqueOccupancy.indexOf(percentage2) === -1) uniqueOccupancy.push(percentage2)
+      occupancyObject2[percentage2] += 1
     };
 
-    for(var prop in percentageObject2) {
-      if(percentageObject2.hasOwnProperty(prop)) {
-        var pieColorNumber2 = percentageObject2[prop];
-        console.log('this is what we want', percentageObject2[prop]);
-        if(pieColorNumber2 === 'West') {
-          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
-        } else if(pieColorNumber2 === 'East') {
-          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#dbba34' })
+    for(var prop in occupancyObject2) {
+      if(occupancyObject2.hasOwnProperty(prop)) {
+        var pieColorNumber2 = occupancyObject2[prop];
+        console.log('this is what we want', occupancyObject2[prop]);
+
+        if(pieColorNumber2 > 23 && pieColorNumber2 <=32) {
+          occupancyChart2.push({ value: pieColorNumber2, label: prop, color: '#7234E1' })
+        } else if(pieColorNumber2 > 33 && pieColorNumber2 <= 41) {
+          occupancyChart2.push({ value: pieColorNumber2, label: prop, color: '#c62f29' })
         } else {
-          occupancyChart2.push({ value: pieColorNumber2, label: prop + '%', color: '#7234E1' })
+          occupancyChart2.push({ value: pieColorNumber2, label: prop, color: '#dbba34' })
         }
       }
     }
@@ -141,7 +141,7 @@ $(document).ready(function(){
   }
 
     // PERCENTAGE GRAPH
-  function percentageShow2(){
+  function occupancyShow(){
     var context = document.getElementById('occupancy').getContext('2d');
     var percentagesChart = new Chart(context).Doughnut(percentageData2);
   }
